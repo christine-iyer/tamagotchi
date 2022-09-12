@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    background-image: img(https://i3.imgpile.com/i/8T4BE.png);
+    font-family: "Open Sans", sans-serif;
+    background-size: cover;
+}
+
+h2 {
+  color: #424242;
+}
+
+.general-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .shadow {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    animation: boingShadow 1s ease-in-out infinite alternate;
+  }
+  
+  .egg {
+    margin: 20px;
+    width: 100px;
+    height: 125px;
+    background-color: #faf3c0;
+    border: 1px solid #000;
+    border-top-left-radius: 50% 60%;
+    border-top-right-radius: 50% 60%;
+    border-bottom-left-radius: 50% 40%;
+    border-bottom-right-radius: 50% 40%;
+    transform-origin: center bottom;
+    animation: boing 1s ease-in-out infinite alternate;
+    box-shadow: inset -5px -10px rgba(168, 164, 176, 0.5);
+  }
+  
+  .spots {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    height: 15px;
+    width: 10px;
+    background-color: #a8a4b0;
+    border-top-left-radius: 60% 60%;
+    border-top-right-radius: 40% 40%;
+    border-bottom-left-radius: 40% 40%;
+    border-bottom-right-radius: 60% 60%;
+  }
+  .spots:before {
+    position: absolute;
+    left: -10px;
+    top: 16px;
+    content: '';
+    display: block;
+    height: 13px;
+    width: 7px;
+    background-color: #a8a4b0;
+    border-top-left-radius: 60% 60%;
+    border-top-right-radius: 40% 40%;
+    border-bottom-left-radius: 40% 40%;
+    border-bottom-right-radius: 60% 60%;
+  }
+  .spots:after {
+    position: absolute;
+    left: 0px;
+    top: 25px;
+    content: '';
+    display: block;
+    height: 10px;
+    width: 5px;
+    background-color: #a8a4b0;
+    border-top-left-radius: 60% 60%;
+    border-top-right-radius: 40% 40%;
+    border-bottom-left-radius: 40% 40%;
+    border-bottom-right-radius: 60% 60%;
+  }
+  
+  @keyframes boing {
+    from {
+      transform: scale(1, 1) translateY(-20px);
+    }
+    to {
+      transform: scale(1.2, 0.8) translateY(0px);
+    }
+  }
+  @keyframes boingShadow {
+    from {
+      transform: scale(0.9, 1);
+    }
+    to {
+      transform: scale(1.2, 0.8);
+    }
+  }
+  
+
+/* ===============================
+  CUSTOM SEIR STYLES
+=============================== */
+.modal {
+    visibility: hidden;
+    width:50vw;
+    max-width: 400px;
+    padding: 30px;
+    position: fixed;
+    top: 45%;
+    transform: translateY(-50%);
+    left:0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #f9d2c5;
+    border-radius: 4px;
+    box-shadow: 4px 1px 10px 0px #dadada;
+    text-align: center;
+    transition: opacity 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+}
+
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.carousel {
+  visibility: hidden;
+  width:50vw;
+  max-width: 700px;
+  padding: 30px;
+  position: fixed;
+  top: 45%;
+  transform: translateY(-50%);
+  left:0;
+  right: 0;
+  margin: 0 auto;
+  background-color: #f9d2c5;
+  border-radius: 4px;
+  box-shadow: 4px 1px 10px 0px #dadada;
+  text-align: center;
+  transition: opacity 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+}
+
+.carousel.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.carousel img {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+button, .btn {
+  text-transform: uppercase;
+  background-color: rgb(251 248 236);
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 1.5rem;
+  color: #424242;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: .8px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 2px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.225);
+}
+
+
+/* ===============================
+  Layout STYLES
+=============================== */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ===============================
+  Tamagotchi STYLES
+=============================== */
+.general-container img {
+  width: 200px;
+
+}
